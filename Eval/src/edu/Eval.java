@@ -4,6 +4,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.sql.*;
 import java.text.*;
+import java.util.Hashtable;
 import javax.swing.*;
 import javax.swing.event.*;
 
@@ -159,7 +160,26 @@ public class Eval extends JFrame implements ActionListener, ItemListener //dont 
         Q1Label.setBounds(25, 15, 100, 20);
         Q1Label.setText("Q1 Technical:");
         Q1Panel.add(Q1Label);
-
+        
+        Q1Slider = new JSlider(JSlider.HORIZONTAL, 1, 8, 1);
+        Q1Slider.setBounds(125, 10, 400, 50);
+        Q1Slider.setMajorTickSpacing(1);    
+        Q1Slider.setPaintTicks(true);
+        Q1Slider.setPaintLabels(true);       
+        Q1Panel.add(Q1Slider);
+        //Q1Slider.addChangeListener(this);
+            
+        Hashtable Q1labelTable = new Hashtable();
+        Q1labelTable.put( 1, new JLabel("A") );
+        Q1labelTable.put( 2, new JLabel("A-") );
+        Q1labelTable.put( 3, new JLabel("B+") );
+        Q1labelTable.put( 4, new JLabel("B") );
+        Q1labelTable.put( 5, new JLabel("B-") );
+        Q1labelTable.put( 6, new JLabel("C+") );
+        Q1labelTable.put( 7, new JLabel("C") );
+        Q1labelTable.put( 8, new JLabel("C-") );
+        Q1Slider.setLabelTable( Q1labelTable );
+        
 //        //begin Q2 panel: holds label and slider
         Q2Panel = new JPanel();
         Q2Panel.setBounds(40, 180, 600, 100);
@@ -171,6 +191,25 @@ public class Eval extends JFrame implements ActionListener, ItemListener //dont 
         Q2Label.setBounds(25, 15, 100, 20);
         Q2Label.setText("Q2 Usefulness:");
         Q2Panel.add(Q2Label);
+        
+        Q2Slider = new JSlider(JSlider.HORIZONTAL, 1, 8, 1);
+        Q2Slider.setBounds(125, 10, 400, 50);
+        Q2Slider.setMajorTickSpacing(1);    
+        Q2Slider.setPaintTicks(true);
+        Q2Slider.setPaintLabels(true);       
+        Q2Panel.add(Q2Slider);
+        //Q1Slider.addChangeListener(this);
+            
+        Hashtable Q2labelTable = new Hashtable();
+        Q2labelTable.put( 1, new JLabel("A") );
+        Q2labelTable.put( 2, new JLabel("A-") );
+        Q2labelTable.put( 3, new JLabel("B+") );
+        Q2labelTable.put( 4, new JLabel("B") );
+        Q2labelTable.put( 5, new JLabel("B-") );
+        Q2labelTable.put( 6, new JLabel("C+") );
+        Q2labelTable.put( 7, new JLabel("C") );
+        Q2labelTable.put( 8, new JLabel("C-") );
+        Q2Slider.setLabelTable( Q2labelTable );
 
         //begin Q3 panel: holds label and slider
         Q3Panel = new JPanel();
@@ -183,6 +222,25 @@ public class Eval extends JFrame implements ActionListener, ItemListener //dont 
         Q3Label.setBounds(25, 15, 100, 20);
         Q3Label.setText("Q3 Clarity:");
         Q3Panel.add(Q3Label);
+        
+        Q3Slider = new JSlider(JSlider.HORIZONTAL, 1, 8, 1);
+        Q3Slider.setBounds(125, 10, 400, 50);
+        Q3Slider.setMajorTickSpacing(1);    
+        Q3Slider.setPaintTicks(true);
+        Q3Slider.setPaintLabels(true);       
+        Q3Panel.add(Q3Slider);
+        //Q1Slider.addChangeListener(this);
+            
+        Hashtable Q3labelTable = new Hashtable();
+        Q3labelTable.put( 1, new JLabel("A") );
+        Q3labelTable.put( 2, new JLabel("A-") );
+        Q3labelTable.put( 3, new JLabel("B+") );
+        Q3labelTable.put( 4, new JLabel("B") );
+        Q3labelTable.put( 5, new JLabel("B-") );
+        Q3labelTable.put( 6, new JLabel("C+") );
+        Q3labelTable.put( 7, new JLabel("C") );
+        Q3labelTable.put( 8, new JLabel("C-") );
+        Q3Slider.setLabelTable( Q2labelTable );
 
         //begin Q4 panel: holds label and slider
         Q4Panel = new JPanel();
@@ -195,6 +253,25 @@ public class Eval extends JFrame implements ActionListener, ItemListener //dont 
         Q4Label.setBounds(25, 15, 100, 20);
         Q4Label.setText("Q4 Overall:");
         Q4Panel.add(Q4Label);
+        
+        Q4Slider = new JSlider(JSlider.HORIZONTAL, 1, 8, 1);
+        Q4Slider.setBounds(125, 10, 400, 50);
+        Q4Slider.setMajorTickSpacing(1);    
+        Q4Slider.setPaintTicks(true);
+        Q4Slider.setPaintLabels(true);       
+        Q4Panel.add(Q4Slider);
+        //Q1Slider.addChangeListener(this);
+            
+        Hashtable Q4labelTable = new Hashtable();
+        Q4labelTable.put( 1, new JLabel("A") );
+        Q4labelTable.put( 2, new JLabel("A-") );
+        Q4labelTable.put( 3, new JLabel("B+") );
+        Q4labelTable.put( 4, new JLabel("B") );
+        Q4labelTable.put( 5, new JLabel("B-") );
+        Q4labelTable.put( 6, new JLabel("C+") );
+        Q4labelTable.put( 7, new JLabel("C") );
+        Q4labelTable.put( 8, new JLabel("C-") );
+        Q4Slider.setLabelTable( Q4labelTable );
 
         //begin comment panel: holds comment label and comment field
         commentPanel = new JPanel();
