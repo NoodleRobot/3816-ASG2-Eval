@@ -130,6 +130,7 @@ public class Eval extends JFrame implements ActionListener, ItemListener //dont 
         teamComboBox.addItem(""); //empty string so nothing shows up by default
         teamComboBox.setSelectedIndex(0);
         teamPanel.add(teamComboBox);
+        teamComboBox.addItemListener(this);
         //end team panel
 
         //begin button panel: holds submit and clear button    
@@ -142,11 +143,13 @@ public class Eval extends JFrame implements ActionListener, ItemListener //dont 
         submitButton = new JButton("Submit");
         submitButton.setBounds(50, 10, 78, 40);
         buttonPanel.add(submitButton);
+        submitButton.addActionListener(this);
 
         clearButton = new JButton("Clear");
         clearButton.setBounds(150, 10, 78, 40);
         buttonPanel.add(clearButton);
         contentPane.add(buttonPanel);
+        clearButton.addActionListener(this);
         //end button panel
 
         //begin Q1 panel: holds label and slider
@@ -167,7 +170,7 @@ public class Eval extends JFrame implements ActionListener, ItemListener //dont 
         Q1Slider.setPaintTicks(true);
         Q1Slider.setPaintLabels(true);       
         Q1Panel.add(Q1Slider);
-        //Q1Slider.addChangeListener(this);
+        Q1Slider.addChangeListener(this);
             
         Hashtable Q1labelTable = new Hashtable();
         Q1labelTable.put( 1, new JLabel("A") );
@@ -309,8 +312,6 @@ public class Eval extends JFrame implements ActionListener, ItemListener //dont 
         calcAvgField.setBounds(220, 10, 100, 30);
         calcAvgPanel.add(calcAvgField);
         
-        submitButton.addActionListener(this);
-        //teamComboBox.addItemListener(this);
         loadTeams();
 
         setTitle("EVAL");   // set title bar string
